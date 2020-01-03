@@ -1,6 +1,8 @@
-# tictactoe
+# TicTacToe
 
 A new Flutter project.
+
+TicTacToe game is created in the flutter.
 
 ## Getting Started
 
