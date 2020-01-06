@@ -91,11 +91,21 @@ class _HomePageState extends State<HomePage> {
       setState(() {
         this.message = '${this.gameState[0]} Wins';
       });
+      Future.delayed(const Duration(milliseconds: 1800), () {
+        setState(() {
+          this.resetGame();
+        });
+      });
     } else if ((gameState[3] != 'empty') &&
         (gameState[3] == gameState[4]) &&
         (gameState[4] == gameState[5])) {
       setState(() {
         this.message = '${this.gameState[3]} Wins';
+      });
+      Future.delayed(const Duration(milliseconds: 1800), () {
+        setState(() {
+          this.resetGame();
+        });
       });
     } else if ((gameState[6] != 'empty') &&
         (gameState[6] == gameState[7]) &&
@@ -103,11 +113,21 @@ class _HomePageState extends State<HomePage> {
       setState(() {
         this.message = '${this.gameState[6]} Wins';
       });
+      Future.delayed(const Duration(milliseconds: 1800), () {
+        setState(() {
+          this.resetGame();
+        });
+      });
     } else if ((gameState[0] != 'empty') &&
         (gameState[0] == gameState[4]) &&
         (gameState[4] == gameState[8])) {
       setState(() {
         this.message = '${this.gameState[0]} Wins';
+      });
+      Future.delayed(const Duration(milliseconds: 1800), () {
+        setState(() {
+          this.resetGame();
+        });
       });
     } else if ((gameState[2] != 'empty') &&
         (gameState[2] == gameState[4]) &&
@@ -115,11 +135,21 @@ class _HomePageState extends State<HomePage> {
       setState(() {
         this.message = '${this.gameState[2]} Wins';
       });
+      Future.delayed(const Duration(milliseconds: 1800), () {
+        setState(() {
+          this.resetGame();
+        });
+      });
     } else if ((gameState[0] != 'empty') &&
         (gameState[0] == gameState[3]) &&
         (gameState[3] == gameState[6])) {
       setState(() {
         this.message = '${this.gameState[0]} Wins';
+      });
+      Future.delayed(const Duration(milliseconds: 1800), () {
+        setState(() {
+          this.resetGame();
+        });
       });
     } else if ((gameState[1] != 'empty') &&
         (gameState[1] == gameState[4]) &&
@@ -127,15 +157,30 @@ class _HomePageState extends State<HomePage> {
       setState(() {
         this.message = '${this.gameState[1]} Wins';
       });
+      Future.delayed(const Duration(milliseconds: 1800), () {
+        setState(() {
+          this.resetGame();
+        });
+      });
     } else if ((gameState[2] != 'empty') &&
         (gameState[2] == gameState[5]) &&
         (gameState[5] == gameState[8])) {
       setState(() {
         this.message = '${this.gameState[2]} Wins';
       });
+      Future.delayed(const Duration(milliseconds: 1800), () {
+        setState(() {
+          this.resetGame();
+        });
+      });
     } else if (!gameState.contains('empty')) {
       setState(() {
         this.message = 'Game Draw';
+      });
+      Future.delayed(const Duration(milliseconds: 1800), () {
+        setState(() {
+          this.resetGame();
+        });
       });
     }
   }
@@ -185,7 +230,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           MaterialButton(
-            color: Colors.purple,
+            color: Colors.orange,
             minWidth: 300.0,
             height: 50.0,
             child: Text(
@@ -194,6 +239,9 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.white,
                 fontSize: 20.0,
               ),
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
             ),
             onPressed: () {
               this.resetGame();
