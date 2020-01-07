@@ -250,6 +250,13 @@ class _HomePageState extends State<HomePage> {
           Container(
             padding: EdgeInsets.all(20.0),
             child: Text(
+              "Powered By",
+              style: TextStyle(fontSize: 18.0),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 20.0),
+            child: Text(
               "Rohit Kurzekar",
               style: TextStyle(fontSize: 18.0),
             ),
